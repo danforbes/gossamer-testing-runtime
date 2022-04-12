@@ -107,7 +107,7 @@ pub const VERSION: RuntimeVersion = RuntimeVersion {
 /// up by `pallet_babe` to implement `fn slot_duration()`.
 ///
 /// Change this to adjust the block time.
-pub const MILLISECS_PER_BLOCK: u64 = 6000;
+pub const MILLISECS_PER_BLOCK: u64 = 4000;
 
 // NOTE: Currently it is not possible to change the slot duration after the chain has started.
 //       Attempting to do so will brick block production.
@@ -118,7 +118,7 @@ pub const PRIMARY_PROBABILITY: (u64, u64) = (1, 4);
 
 // NOTE: Currently it is not possible to change the epoch duration after the chain has started.
 //       Attempting to do so will brick block production.
-pub const EPOCH_DURATION_IN_BLOCKS: BlockNumber = 10 * MINUTES;
+pub const EPOCH_DURATION_IN_BLOCKS: BlockNumber = 3 * MINUTES;
 pub const EPOCH_DURATION_IN_SLOTS: u64 = {
 	const SLOT_FILL_RATE: f64 = MILLISECS_PER_BLOCK as f64 / SLOT_DURATION as f64;
 
